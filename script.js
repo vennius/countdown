@@ -1,11 +1,20 @@
-//361-(12*30-(30-16))
 const hoursEl = document.querySelector('.hours');
 const minutesEl = document.querySelector('.minutes');
 const secondsEl = document.querySelector('.seconds');
 
+setInterval(main, 1000);
+
 function main(){
-  //LANJUTIN NEH
+  const date = new Date();
+  
   let leftHours = getLeftDay() *24;
+  let leftMinutes = 60 - date.getMinutes();
+  let leftSeconds = 60 - date.getSeconds();
+  
+  hoursEl.innerHTML = leftHours;
+  minutesEl.innerHTML = leftMinutes;
+  secondsEl.innerHTML = leftSeconds;
+  
 }
 
 function getLeftDay(){
