@@ -3,12 +3,94 @@ const hoursEl = document.querySelector('.hours');
 const minutesEl = document.querySelector('.minutes');
 const secondsEl = document.querySelector('.seconds');
 
+function main(){
+  //LANJUTIN NEH
+  let leftHours = getLeftDay() *24;
+}
 
-function getFebDay(){
+function getLeftDay(){
   const date = new Date();
-  if(date.getYear() / 4 == 0){
-    return 366-(date.getMonth()*30-(30-date.getDate()));
+  date.setDate(17);
+  let totalDay;
+  
+  if(getTotalDay()%4 === 0){
+    totalDay = 366;
   }else{
-    return 365-(date.getMonth()*30-(30-date.getDate()));
+    totalDay = 365;
   }
+  
+  let leftDay = 0;
+  
+  for(let i = 1; i < date.getMonth()-1; i++){
+    leftDay += getTotalDay(i);
+  }
+  
+  leftDay += date.getDate();
+  
+  return totalDay - leftDay - 60;
+  
+  
+}
+
+function getTotalDay(bulan){
+  
+  const date = new Date();
+  
+  switch(bulan){
+    
+    case 1:
+      return 31;
+    break;
+    
+    case 2:
+      if((date.getFullYear() % 4) == 0){
+        return 28;
+      }else{
+        return 29;
+      }
+    break;
+    
+    case 3:
+      return 31;
+    break;
+    
+    case 4:
+      return 30;
+    break;
+    
+    case 5:
+      return 31;
+    break;
+    
+    case 6:
+      return 30;
+    break;
+    
+    case 7:
+      return 31;
+    break;
+    
+    case 8:
+      return 31;
+    break;
+    
+    case 9:
+      return 30;
+    break;
+    
+    case 10:
+      return 31;
+    break;
+    
+    case 11:
+      return 30;
+    break;
+    
+    case 12:
+      return 31;
+    break;
+    
+    
+  }
+  
 }
