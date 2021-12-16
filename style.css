@@ -1,4 +1,6 @@
-@keyframes rainbow{
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+
+@keyframes rainbowLine{
   0%{
     background: #000000;
   }
@@ -10,8 +12,20 @@
   }
 }
 
+@keyframes rainbowBorder{
+  0%{
+    border-color: #000000;
+  }
+  50%{
+    border-color: #8a00ff;
+  }
+  100%{
+    border-color: #43ff00;
+  }
+}
+
 body{
-  font-family: arial;
+  font-family: Outfit;
   background: #759ca6;
 }
 
@@ -19,11 +33,17 @@ body{
   width: 210px;
   height: 200px;
   background: #80bac8;
-  margin: 20px auto;
+  margin: 100px auto;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border: 5px solid black;
+  animation: rainbowBorder 4s infinite alternate;
+}
+
+.container h4{
+  font-weight: bold;
 }
 
 .hours,.minutes,.seconds{
@@ -36,5 +56,5 @@ body{
   height: 5px;
   background: #000;
   margin: 10px auto;
-  animation: rainbow 4s infinite alternate;
+  animation: rainbowLine 4s infinite alternate-reverse;
 }
