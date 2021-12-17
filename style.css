@@ -58,3 +58,24 @@ body{
   margin: 10px auto;
   animation: rainbowLine 4s infinite alternate-reverse;
 }
+
+
+.labelHours{
+  float: left;
+  position: relative;
+  left: 20px;
+}
+
+.labelSeconds{
+  float: right;
+  position: relative;
+  right: 15px;
+}
+
+.labelHours,.labelMinutes,.labelSeconds{
+  
+  text-align: center;
+  font-size: 20px;
+  
+}
+
