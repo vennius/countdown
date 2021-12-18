@@ -11,9 +11,18 @@ function main(){
   let leftMinutes = 60 - date.getMinutes();
   let leftSeconds = 60 - date.getSeconds();
   
-  hoursEl.innerHTML = leftHours;
-  minutesEl.innerHTML = leftMinutes;
-  secondsEl.innerHTML = leftSeconds;
+  if(leftHours && leftMinutes && leftSeconds === 0){
+    alert('Happy New Year ^_^');
+    alert('Wish You All The best :)');
+    hoursEl.innerHTML = leftHours;
+    minutesEl.innerHTML = leftMinutes;
+    secondsEl.innerHTML = leftSeconds;
+  }else{
+    hoursEl.innerHTML = leftHours;
+    minutesEl.innerHTML = leftMinutes;
+    secondsEl.innerHTML = leftSeconds;
+    
+  }
   
 }
 
