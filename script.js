@@ -19,7 +19,6 @@ function main(){
 
 function getLeftDay(){
   const date = new Date();
-  date.setDate(17);
   let totalDay;
   
   if(getTotalDay()%4 === 0){
