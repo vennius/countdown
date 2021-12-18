@@ -7,7 +7,7 @@ setInterval(main, 1000);
 function main(){
   const date = new Date();
   
-  let leftHours = getLeftDay() *24;
+  let leftHours = getTotalHours();
   let leftMinutes = 60 - date.getMinutes();
   let leftSeconds = 60 - date.getSeconds();
   
@@ -101,4 +101,9 @@ function getTotalDay(bulan){
     
   }
   
+}
+
+function getTotalHours(){
+  const date = new Date();
+  return (getLeftDay()*24)-date.getHours();
 }
