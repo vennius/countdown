@@ -5,12 +5,12 @@ const secondsEl = document.querySelector('.seconds');
 const title = document.querySelector('.container h4');
 
 const date = new Date();
-title.innerHTML = `Hitungan mundur sebelum tahun ${date.getYear + 1}`;
+title.innerHTML = `Hitungan mundur sebelum tahun ${date.getFullYear() + 1}!`;
+
 
 setInterval(main, 1000);
 
 function main(){
-  const date = new Date();
   
   let leftHours = getTotalHours();
   let leftMinutes = 60 - date.getMinutes();
@@ -32,7 +32,6 @@ function main(){
 }
 
 function getLeftDay(){
-  const date = new Date();
   let totalDay;
   
   if(getTotalDay()%4 === 0){
@@ -49,14 +48,13 @@ function getLeftDay(){
   
   leftDay += date.getDate();
   
-  return totalDay - leftDay - 60;
+  return totalDay - leftDay;
   
   
 }
 
 function getTotalDay(bulan){
   
-  const date = new Date();
   
   switch(bulan){
     
@@ -118,6 +116,5 @@ function getTotalDay(bulan){
 }
 
 function getTotalHours(){
-  const date = new Date();
-  return (getLeftDay()*24)-date.getHours();
+  return ((getLeftDay()*24)+(24-date.getHours()));
 }
