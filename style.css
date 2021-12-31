@@ -31,7 +31,6 @@ body{
 
 .container{
   width: 210px;
-  height: 200px;
   background: #80bac8;
   margin: 100px auto;
   padding: 10px;
@@ -47,7 +46,7 @@ body{
 }
 
 .hours,.minutes,.seconds{
-  font-size: 40px;
+  font-size: 30px;
   margin: 5px;
 }
 
