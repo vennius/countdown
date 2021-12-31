@@ -2,6 +2,11 @@ const hoursEl = document.querySelector('.hours');
 const minutesEl = document.querySelector('.minutes');
 const secondsEl = document.querySelector('.seconds');
 
+const title = document.querySelector('.container h4');
+
+const date = new Date();
+title.innerHTML = `Hitungan mundur sebelum tahun ${date.getYear + 1}`;
+
 setInterval(main, 1000);
 
 function main(){
