@@ -11,6 +11,7 @@ title.innerHTML = `Hitungan mundur sebelum tahun ${date.getFullYear() + 1}!`;
 setInterval(main, 1000);
 
 function main(){
+  const date = new Date();
   
   let leftHours = getTotalHours();
   let leftMinutes = 60 - date.getMinutes();
